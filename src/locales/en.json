@@ -1,0 +1,11 @@
+{
+  "Login": "Login",
+  "Logout": "Logout",
+  "Welcome": "Welcome",
+  "About": "OpenStreetMap Localization Tool (OsmLT) is started by Tracestrack.com. It greatly facilitates localizing OpenStreetMap. It is open sourced on <a href=\"{{githubUrl}}\">Github</a>.",
+  "StartEditing": "Login with your OpenStreetMap account and start editing today!",
+  "ActiveChangeset": "Active changeset: {{id}}",
+  "NoActiveChangeset": "No active changeset",
+  "Comment": "Comment",
+  "CloseChangeset": "Close changeset"
+}

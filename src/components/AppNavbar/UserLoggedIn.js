@@ -2,8 +2,11 @@ import {Fragment} from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
+import { useTranslation } from 'react-i18next'; 
 
 export default function UserLoggedIn({user, logout}) {
+    const { t } = useTranslation(); 
+
     return (
         <Fragment>
             {user.img ? 
@@ -18,7 +21,7 @@ export default function UserLoggedIn({user, logout}) {
             <Navbar.Text className="mx-2"
                 >{user.display_name}
             </Navbar.Text>
-            <Button onClick={logout}>Logout</Button>
+            <Button onClick={logout}>{t('Logout')}</Button>
         </Fragment>
     );
 }

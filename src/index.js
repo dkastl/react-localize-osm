@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './config/i18n'; // import i18next configuration
 
 ReactDOM.render(
   <React.StrictMode>

@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
-
+import { useTranslation } from 'react-i18next';
 
 function getCookie(name) {
   const value = `; ${document.cookie}`;
@@ -15,6 +15,7 @@ export default function ChangesetBox({
     changeset, 
     handlers: {onUpdate, onClose}}
 ) {
+    const { t } = useTranslation();
     const [newComment, setComment] = useState(changeset?.tags.comment||"");
 
     useEffect(() => {
@@ -28,7 +29,7 @@ export default function ChangesetBox({
         >
             <Card.Body>
                 <Row className="pb-2 justify-content-center">
-                    <Form.Label>Comment:</Form.Label>
+                    <Form.Label>{t('Comment')}:</Form.Label>
                     <Form.Control 
                         as="textarea" 
                         value={newComment}
@@ -42,7 +43,7 @@ export default function ChangesetBox({
                         onClose({comment: newComment})
                               }
                     >
-                        Close changeset
+                        {t('CloseChangeset')}
                     </Button>
                 </Row>
             </Card.Body>

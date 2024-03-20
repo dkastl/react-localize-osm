@@ -1,10 +1,15 @@
+import { useTranslation } from 'react-i18next';
+import { Interweave } from 'interweave';
+import { githubUrl } from '../config/settings';
+
 export default function NotLoggedInGreeting() {
+    const { t } = useTranslation();
+
     return (
       <div>
-        <h2>Welcome</h2>
-        <p>OpenStreetMap Localization Tool (OsmLT) is started by Tracestrack.com. It greately faciliates localizing OpenStreetMap. It is open sourced on <a href="https://github.com/tracestrack/openstreetmap-localization-tool">Github</a>.</p>
-
-        <p>Login with your OpenStreetMap account and start editing today!</p>
+        <h2>{t('Welcome')}</h2>
+        <p><Interweave content={t('About', { githubUrl })} /></p>
+        <p>{t('StartEditing')}</p>
       </div>
     );
 }
